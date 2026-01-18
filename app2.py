@@ -38,7 +38,7 @@ def get_weather(lat, lon, past_days, forecast_days, variable, timezone, show_dai
     }
 
     #parameters to get daily data
-    if show_daily:
+    if (show_daily or show_daily2):
         # Basic daily variables; you can add more
         params["daily"] = ["temperature_2m_max", "temperature_2m_min", "rain_sum", "snowfall_sum", "windgusts_10m_max"]
 
@@ -181,11 +181,11 @@ if st.button("Show Trend"):
                  daily2 = wdata.get("daily", {})
                  if daily2:
                       st.subheader("Daily Total Snow/Rain")
-                      daily_time2 = pd.to_datetime(daily["time"])
+                      daily_time2 = pd.to_datetime(daily2["time"])
                       df_daily2 = pd.DataFrame({
-                              "date": daily_time,
-                              "total_snow": daily["snowfall_sum"],
-                              "total_rain": daily["rain_sum"]
+                              "date": daily_time2,
+                              "total_snow": daily2["snowfall_sum"],
+                              "total_rain": daily2["rain_sum"]
                             }).set_index("date")
 
                       fig22, ax22 = plt.subplots(figsize=(12, 4))
