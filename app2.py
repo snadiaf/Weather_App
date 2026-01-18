@@ -152,6 +152,7 @@ if st.button("Show Trend"):
 
             st.pyplot(fig)
 
+            # Graph to show daily max-min temp trend
             if show_daily:
                  daily = wdata.get("daily", {})
                  if daily:
@@ -175,7 +176,7 @@ if st.button("Show Trend"):
 
                       st.pyplot(fig2)
 
-            
+            #Graph to show daily total snow and rain 
             if show_daily2:
                  daily2 = wdata.get("daily", {})
                  if daily2:
