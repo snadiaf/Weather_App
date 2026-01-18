@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 
-#function to get user's selection
+#function to get user's selection for location
 def selectLocation(data):
 
     country_set = set(data.loc[:,"country"]) #Creating set with all countries
