@@ -40,7 +40,7 @@ def get_weather(lat, lon, past_days, forecast_days, variable, timezone, show_dai
     #parameters to get daily data
     if show_daily:
         # Basic daily variables; you can add more
-        params["daily"] = ["temperature_2m_max", "temperature_2m_min", "rain_sum", "snowfall_sum", "precipitation_sum", "windgusts_10m_max"]
+        params["daily"] = ["temperature_2m_max", "temperature_2m_min", "rain_sum", "snowfall_sum", "windgusts_10m_max"]
 
     #Get the data in json
     resp = requests.get(base_url, params=params)
