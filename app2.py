@@ -38,7 +38,7 @@ def get_weather(lat, lon, past_days, forecast_days, variable, timezone, show_dai
     }
 
     #parameters to get daily data
-    if show_daily:
+    if show_daily or show_daily2:
         # Basic daily variables; you can add more
         params["daily"] = ["temperature_2m_max", "temperature_2m_min", "rain_sum", "snowfall_sum", "windgusts_10m_max"]
 
