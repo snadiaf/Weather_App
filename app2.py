@@ -61,10 +61,11 @@ data = pd.read_csv(file)
 
 country,city,lat,lon = selectLocation(data)
 
-st.logo("image.png", icon_image="image.png", size="large")
-
 #creating sidebar on the page
 with st.sidebar:
+    #adding image as header of sidebar
+    st.image("image.png", width=300)
+
     st.header("Settings")
 
     st.write("Selected location: ", city, " in ", country)
