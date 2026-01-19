@@ -51,15 +51,17 @@ def get_weather(lat, lon, past_days, forecast_days, variable, timezone, show_dai
 
 st.set_page_config(page_title="Weather App", layout="wide")
 
-st.title("Welcome to Ayaan's Weather App!! :sun_behind_rain_cloud:")
+st.title("Welcome to Ayaan's Weather App!!")
 
-st.subheader("Choose a location :cityscape:")
+st.subheader("Choose a location")
 
 #Reading location info from file
 file = "worldcities.csv"
 data = pd.read_csv(file)
 
 country,city,lat,lon = selectLocation(data)
+
+st.logo("image.png", icon_image="image.png", size="large")
 
 #creating sidebar on the page
 with st.sidebar:
